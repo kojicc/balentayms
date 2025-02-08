@@ -169,7 +169,7 @@ export default function IndexPage() {
                   alt="Teddy Bear"
                 />
                 <Title order={2}>
-                  Can you be my Valentine's date, love?
+                  an you be my Valentine&apos;s date, love?
                   <Text ta={"center"} c="dimmed">
                     {noCount > 0
                       ? "Please say yes na 🥺"
@@ -285,14 +285,14 @@ export default function IndexPage() {
                   h={300}
                 />
                 <Title order={2} ta="center">
-                  Thank you for being my Valentine, love! 💝
+                  Thank you for being my Valentine&apos;s date, love! 💝
                   <Text c="dimmed" size="lg" mt={10}>
                     Our special date is set for{" "}
                     {selectedDate.toLocaleDateString()} at{" "}
                     {selectedDate.toLocaleTimeString()}!
                   </Text>
                   <Text c="dimmed" size="md" mt={5}>
-                    I'll make sure it'll be super sweet and special! 🌹
+                    &apos;ll make sure it&apos;ll be super sweet and special! 🌹
                   </Text>
                 </Title>
               </Stack>
