@@ -9,7 +9,6 @@ import {
   TextInput,
   Image,
   Tooltip,
-  BackgroundImage,
 } from "@mantine/core";
 import { useState } from "react";
 import { DateTimePicker } from "@mantine/dates";
@@ -128,7 +127,7 @@ export default function IndexPage() {
               </Group>
               <form onSubmit={() => nextPage(page, setPage)}>
                 <TextInput
-                  label="name mo sana dito pero oks na sa name, need to see u nalang my cutie future everything <3 lovee"
+                  label="name mo sana dito pero oks na sa name, need to see u nalang my cutie future everything &lt;3 lovee"
                   value={name}
                   onChange={(event) => setName(event.currentTarget.value)}
                   disabled
@@ -232,26 +231,27 @@ export default function IndexPage() {
                   h={300}
                 />
                 <Title order={2}>
-                  Thank you for saying yes, love!! Now, kelan ka kaya pwede? kahit hindi magkita basta magkausap lang tayo, love! 💕
+                  Thank you for saying yes, love!! Now, kelan ka kaya pwede?
+                  kahit hindi magkita basta magkausap lang tayo, love! 💕
                 </Title>
               </Group>
               <form
                 onSubmit={(e) => {
                   e.preventDefault();
-                    if (selectedDate) setPage(page + 1);
-                  }}
-                  >
-                  <DateTimePicker
-                    value={selectedDate}
-                    onChange={setSelectedDate}
-                    valueFormat="DD MMM YYYY hh:mm A"
-                    label="Pick date and time"
-                    placeholder="Pick date and time"
-                    excludeDate={(date) => {
+                  if (selectedDate) setPage(page + 1);
+                }}
+              >
+                <DateTimePicker
+                  value={selectedDate}
+                  onChange={setSelectedDate}
+                  valueFormat="DD MMM YYYY hh:mm A"
+                  label="Pick date and time"
+                  placeholder="Pick date and time"
+                  excludeDate={(date) => {
                     const today = new Date();
                     today.setHours(0, 0, 0, 0);
-                    return  date < today; // Disable Sundays and past dates
-                    }}
+                    return date < today; // Disable past dates
+                  }}
                   required
                 />
                 <Button
@@ -267,7 +267,6 @@ export default function IndexPage() {
               </form>
             </Stack>
           )}
-
           {page === 4 && selectedDate && (
             <Stack
               style={{
